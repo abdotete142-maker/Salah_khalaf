@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> 🕋مؤسسة صلاح خلف للرحلات وحجز التذاكر والتوريدات العمومية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+ 
+
+</head>
+<body>
+ 
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <div class="loader-crescent"></div>
+  <div class="loader-text">مؤسسة صلاح خلف</div>
+  <div class="loader-dots">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+ 
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="scrollToSection('home')">
+      <div class="logo-icon">☪</div>
+      <div class="logo-text">
+        <div class="main" id="logoMain">مؤسسة صلاح خلف</div>
+        <div class="sub" id="logoSub">للرحلات والتوريدات العمومية</div>
+      </div>
+    </div>
+ 
+    <div class="nav-links">
+      <a href="#home" id="nav1">الرئيسية</a>
+      <a href="#about" id="nav2">من نحن</a>
+      <a href="#packages" id="nav3">الباقات</a>
+      <a href="#celebrations" id="nav4">الاحتفالات والجوائز</a>
+      <a href="#gallery" id="nav5">معرض الصور</a>
+      <a href="#testimonials" id="nav6">آراء العملاء</a>
+      <a href="#contact" id="nav7">تواصل معنا</a>
+    </div>
+ 
+    <div class="nav-right">
+      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn" title="تبديل الوضع">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="lang-btn" onclick="toggleLang()" id="langBtn">English</button>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="toggleMenu()" id="mnav1">الرئيسية</a>
+    <a href="#about" onclick="toggleMenu()" id="mnav2">من نحن</a>
+    <a href="#packages" onclick="toggleMenu()" id="mnav3">الباقات</a>
+    <a href="#celebrations" onclick="toggleMenu()" id="mnav4">الاحتفالات والجوائز</a>
+    <a href="#gallery" onclick="toggleMenu()" id="mnav5">معرض الصور</a>
+    <a href="#testimonials" onclick="toggleMenu()" id="mnav6">آراء العملاء</a>
+    <a href="#contact" onclick="toggleMenu()" id="mnav7">تواصل معنا</a>
+    <div class="mobile-lang">
+      <button class="lang-btn" onclick="toggleLang()" id="langBtnMobile">English</button>
+    </div>
+  </div>
+</nav>
+ 
+<!-- HERO -->
+<section id="home">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <i class="fas fa-star"></i>
+      <span id="heroBadge">رحلات الحج والعمرة المميزة</span>
+      <i class="fas fa-star"></i>
+    </div>
+    <h1 class="hero-title" id="heroTitle">
+      مؤسسة <span>صلاح خلف</span><br>للرحلات وحجز التذاكر
+    </h1>
+    <p class="hero-subtitle" id="heroSubtitle">حلمك للعمرة أصبح حقيقة وسفرك مضمون بإذن الله</p>
+    <p class="hero-desc" id="heroDesc">
+      نقدم لكم أرقى خدمات الحج والعمرة بأعلى معايير الجودة والراحة، لتكون رحلتكم الإيمانية تجربة لا تُنسى مليئة بالطمأنينة والبركة.
+    </p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.querySelector('#packages').scrollIntoView({behavior:'smooth'})" id="heroBtn1">
+        <i class="fas fa-kaaba" style="margin-left:8px"></i>
+        احجز رحلتك الآن
+      </button>
+      <button class="btn-secondary" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})" id="heroBtn2">
+        تعرف علينا
+      </button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">+500</span>
+        <span class="stat-label" id="stat1">معتمر ومعتمرة</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label" id="stat2">باقات متنوعة</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label" id="stat3">رضا العملاء</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span id="scrollHint">انزل لاستكشاف المزيد</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+ 
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <div class="about-img-placeholder">
+          <img src="photo.jpeg" alt="صورة صاحب المؤسسة" class="about-photo">
+        </div>
+        <div class="about-corner tl"></div>
+        <div class="about-corner br"></div>
+        <div class="about-badge">
+          <span class="num">+5</span>
+          <span class="txt">سنوات خبرة</span>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <span class="label">من نحن</span>
+        <h2 id="aboutTitle">مؤسسة <span>صلاح خلف</span><br>للرحلات وحجز التذاكر والتوريدات العمومية</h2>
+        <p id="aboutP1">نسعى لتقديم أفضل خدمات الحج والعمرة بأعلى درجات الراحة والتنظيم، لنمنح عملاءنا رحلة إيمانية مميزة مليئة بالطمأنينة والخدمة الممتازة.</p>
+        <p id="aboutP2">مؤسسة تجمع بين الخبرة الطويلة والأمانة والاحترافية في تنظيم رحلات الحج والعمرة، مع الحرص الكامل على راحتكم وسلامتكم في كل خطوة من خطوات الرحلة المقدسة.</p>
+        <div class="about-features">
+          <div class="about-feat"><i class="fas fa-shield-alt"></i><span id="af1">سفر مضمون وآمن بإذن الله</span></div>
+          <div class="about-feat"><i class="fas fa-concierge-bell"></i><span id="af2">خدمة متميزة على أعلى مستوى</span></div>
+          <div class="about-feat"><i class="fas fa-clock"></i><span id="af3">متابعة مستمرة طوال الرحلة</span></div>
+          <div class="about-feat"><i class="fas fa-handshake"></i><span id="af4">تسهيلات ميسرة تناسب الجميع</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">باقاتنا</div>
+      <h2 class="section-title" id="pkgTitle">اختر <span>باقتك</span> المناسبة</h2>
+      <div class="section-line"></div>
+    </div>
+ 
+    <div class="packages-grid">
+      <!-- Package 1 -->
+      <div class="pkg-card reveal" onclick="openPopup('باقة 1','1000 جنيه')">
+        <div class="pkg-icon"><i class="fas fa-moon"></i></div>
+        <div class="pkg-name" id="pkgName1">باقة 1</div>
+        <div class="pkg-price"><span>﷼</span> 1000 <span id="pkgCurr1">جنيه</span></div>
+        <div class="pkg-detail" id="pkgDetail1">كل شهر لمدة 36 شهر</div>
+        <div class="pkg-divider"></div>
+        <button class="pkg-btn" id="pkgBtn">احجز الآن</button>
+      </div>
+ 
+      <!-- Package 2 -->
+      <div class="pkg-card featured reveal" onclick="openPopup('باقة 2','2000 جنيه')">
+        <div class="pkg-badge" id="featBadge">الأكثر طلباً</div>
+        <div class="pkg-icon"><i class="fas fa-kaaba"></i></div>
+        <div class="pkg-name" id="pkgName2">باقة 2</div>
+        <div class="pkg-price"><span>﷼</span> 2000 <span id="pkgCurr2">جنيه</span></div>
+        <div class="pkg-detail" id="pkgDetail2">كل شهر لمدة 18 شهر</div>
+        <div class="pkg-divider"></div>
+        <button class="pkg-btn" id="pkgBtn2">احجز الآن</button>
+      </div>
+ 
+      <!-- Package 3 -->
+      <div class="pkg-card reveal" onclick="openPopup('باقة 3','30000 جنيه')">
+        <div class="pkg-icon"><i class="fas fa-star-and-crescent"></i></div>
+        <div class="pkg-name" id="pkgName3">باقة 3</div>
+        <div class="pkg-price"><span>﷼</span> 30000 <span id="pkgCurr3">جنيه</span></div>
+        <div class="pkg-detail" id="pkgDetail3">تدفع مقدم والباقي تقسيط</div>
+        <div class="pkg-divider"></div>
+        <button class="pkg-btn" id="pkgBtn3">احجز الآن</button>
+      </div>
+    </div>
+ 
+    <!-- Features Below Packages -->
+    <div class="pkg-features-section reveal">
+      <h3 class="pkg-features-title" id="pkgFeatTitle">مميزات جميع الباقات</h3>
+      <div class="pkg-features-grid">
+        <div class="pkg-feat-item"><div class="icon"><i class="fas fa-hand-holding-heart"></i></div><div class="text" id="pf1">تسهيلات ميسرة تناسب الجميع</div></div>
+        <div class="pkg-feat-item"><div class="icon"><i class="fas fa-shield-alt"></i></div><div class="text" id="pf2">سفرك مضمون بإذن الله</div></div>
+        <div class="pkg-feat-item"><div class="icon"><i class="fas fa-hotel"></i></div><div class="text" id="pf3">خدمات متميزة وإقامة مريحة</div></div>
+        <div class="pkg-feat-item"><div class="icon"><i class="fas fa-route"></i></div><div class="text" id="pf4">تنظيم متكامل من البداية للنهاية</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- POPUP -->
+<div class="popup-overlay" id="popupOverlay" onclick="closePopupOut(event)">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()"><i class="fas fa-times"></i></button>
+    <div class="popup-icon"><i class="fas fa-kaaba"></i></div>
+    <h3 class="popup-title" id="popupTitle">احجز رحلتك الآن</h3>
+    <p class="popup-subtitle" id="popupSub">أدخل بياناتك وسنتواصل معك في أقرب وقت</p>
+    <div class="popup-form">
+      <div>
+        <label id="popupLabelName">اسم العميل</label>
+        <input type="text" id="clientName" placeholder="أدخل اسمك الكامل" />
+      </div>
+      <div>
+        <label id="popupLabelPhone">رقم الهاتف</label>
+        <input type="tel" id="clientPhone" placeholder="01xxxxxxxxx" />
+      </div>
+      <div>
+        <label id="popupLabelPkg">الباقة المختارة</label>
+        <select id="clientPkg">
+          <option value="باقة 1 - 1000 جنيه">باقة 1 — 1000 جنيه</option>
+          <option value="باقة 2 - 2000 جنيه">باقة 2 — 2000 جنيه</option>
+          <option value="باقة 3 - 30000 جنيه">باقة 3 — 30000 جنيه</option>
+        </select>
+      </div>
+      <button class="popup-submit" onclick="sendWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+        <span id="popupSubmitBtn">إرسال الطلب عبر واتساب</span>
+      </button>
+    </div>
+  </div>
+</div>
+ 
+<!-- CELEBRATIONS -->
+<section id="celebrations">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">تكريم وإنجاز</div>
+      <h2 class="section-title" id="celebTitle">الاحتفالات <span>والجوائز</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+ 
+      <!-- Card 1 -->
+      <div class="celeb-card reveal">
+        <div class="celeb-img">
+          <i class="fas fa-trophy"><img src="sahahda2.jpeg" alt=""></i>
+          <span>صورة الجائزة</span>
+        </div>
+        <div class="celeb-body">
+          <div class="celeb-cat">تكريم</div>
+          <div class="celeb-title" id="celebT1">شهادة تقدير للمعتمرة  </div>
+          <div class="celeb-desc" id="celebD1"> تُمنح هذه الشهادة إلى المعتمر/ 
+تقديرًا لالتزامه وحسن خُلقه وتعاونه الطيب خلال رحلة العمرة،
+ونسأل الله أن يتقبل منه صالح الأعمال، وأن يجعل عمرته مبرورة وسعيه مشكورًا وذنبه مغفورًا بإذن الله.</div>
+        </div>
+      </div>
+            <div class="celeb-card reveal">
+        <div class="celeb-img celeb-img-center">
+          <img src="WhatsApp Image 2026-05-22 at 10.37.33 AM.jpeg" alt="صورة الجائزة" class="celeb-photo-contain">
+        </div>
+        <div class="celeb-body">
+          <div class="celeb-cat">تكريم</div>
+          <div class="celeb-title" id="celebT1">شهادة تقدير للمعتمرة  </div>
+          <div class="celeb-desc" id="celebD1"> تُمنح هذه الشهادة إلى المعتمر/ 
+تقديرًا لالتزامه وحسن خُلقه وتعاونه الطيب خلال رحلة العمرة،
+ونسأل الله أن يتقبل منه صالح الأعمال، وأن يجعل عمرته مبرورة وسعيه مشكورًا وذنبه مغفورًا بإذن الله.</div>
+        </div>
+      </div>
+ 
+      <!-- Card 2 -->
+      <div class="celeb-card reveal">
+        <div class="celeb-img">
+          <i class="fas fa-certificate"> <img src="shahada.jpeg" alt="شهادة تقدير"> </i>
+          <span>شهادة تقدير</span>
+        </div>
+        <div class="celeb-body">
+          <div class="celeb-cat"></div>
+          <div class="celeb-title" id="celebT2">شهادة تقدير للمعتمرة  </div>
+          <div class="celeb-desc" id="celebD2">تُمنح إلى/ المعتمرة
+تقديرًا لدعواتها الطيبة وقلبها الجميل وروحها المليئة بالمحبة والطمأنينة خلال رحلة العمرة،
+فكانت مثالًا للأخلاق الطيبة والكلمة الحنونة التي تركت أثرًا جميلًا بين الجميع.
+
+نسأل الله أن يتقبل دعواتها، ويكتب لها الأجر والسعادة وراحة البال،
+وأن يرزقها دائمًا الخير والبركة وزيارة بيته الحرام مرات عديدة. 🤍✨</div>
+        </div>
+      </div>
+ 
+   
+    </div>
+  </div>
+</section>
+ 
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">لحظاتنا</div>
+      <h2 class="section-title" id="galTitle">معرض <span>الصور</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><img src="img3.jpeg" alt="لحظات إيمانية"></div>
+        <div class="gallery-overlay"><span>لحظات إيمانية</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><img src="img6.jpeg" alt="الحرم المكي"></div>
+        <div class="gallery-overlay"><span>الحرم المكي</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><img src="img2.jpeg" alt="المعتمرون"></div>
+        <div class="gallery-overlay"><span>المعتمرون</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><img src="img7.jpeg" alt="مجموعة المعتمرين"></div>
+        <div class="gallery-overlay"><span>مجموعة المعتمرين</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><i class="fas fa-camera"><img src="img5.jpeg" alt=""></i><span>صورة 5</span></div>
+        <div class="gallery-overlay"><span>الكعبة المشرفة</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><i class="fas fa-camera"><img src="WhatsApp Image 2026-05-22 at 11.05.42 AM (3).jpeg" alt=""></i><span>صورة 6</span></div>
+        <div class="gallery-overlay"><span>المسجد النبوي</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><i class="fas fa-camera"><img src="WhatsApp Image 2026-05-22 at 10.54.56 AM (1).jpeg" alt=""></i><span>صورة 7</span></div>
+        <div class="gallery-overlay"><span>رحلة مباركة</span></div>
+      </div>
+       <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><i class="fas fa-camera"><img src="WhatsApp Image 2026-05-22 at 11.05.42 AM.jpeg" alt=""></i><span>صورة 8</span></div>
+        <div class="gallery-overlay"><span>رحلة مباركة</span></div>
+      </div>
+       <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><i class="fas fa-camera"><img src="WhatsApp Image 2026-05-22 at 11.05.42 AM (2).jpeg" alt=""></i><span>صورة 8</span></div>
+        <div class="gallery-overlay"><span>رحلة مباركة</span></div>
+      </div>
+       <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><i class="fas fa-camera"><img src="WhatsApp Image 2026-05-22 at 10.54.55 AM.jpeg" alt=""></i><span>صورة 8</span></div>
+        <div class="gallery-overlay"><span>رحلة مباركة</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><i class="fas fa-camera"><img src="img8.jpeg" alt=""></i><span>صورة 8</span></div>
+        <div class="gallery-overlay"><span>لحظات التكريم</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <div class="gallery-placeholder"><i class="fas fa-camera"><img src="WhatsApp Image 2026-05-22 at 10.54.56 AM.jpeg" alt=""></i><span>صورة 8</span></div>
+        <div class="gallery-overlay"><span>لحظات التكريم</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">شهاداتهم</div>
+      <h2 class="section-title" id="testiTitle">آراء <span>عملائنا</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text" id="t1text">السلام عليكم ورحمه الله وبركاته
+حابب اشكر مؤسسه جمال خلف ع الالتزام ف المزارات والالتزام ف الوقت واحسن خدمه واحسن التزام وعقبال العوده للجميع خير خلف لخير سلف رحم الله اباكم وشكر خاص للحاج ايمن خلف على اهتمامه ورعايته لكبار السن ومجهوده المبذول مع جميع أفراد رحله 2\9</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><i class="fas fa-user"></i></div>
+          <div>
+            <span class="testi-name" id="t1name"> أحمد مصطفى</span>
+            <span class="testi-loc" id="t1loc">الأسكندرية</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text" id="t2text">"جعلكم الله امتدادا لوالدكم" وأن نكونوا خير خلف لخير سلف، وأن تجعلوا إرثه الطيب مستمرًا فيكم وفى واحفاده كم كنت نعم الرجل في خدمه الجميع رحمك الله رحمة واسعة وأسكنه الفردوس الأعلى من الجنة يا حاج جمال وربنا يبارك في أولادك واحفادك فعلا صدق من قال اللى خلف ما ماتش</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><i class="fas fa-user"></i></div>
+          <div>
+            <span class="testi-name" id="t2name">الحج ناصر </span>
+            <span class="testi-loc" id="t2loc">الإسكندرية</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text" id="t3text">السلام عليكم يا حاج صلاح
+جزاكم الله عنا خير الجزاء
+وبارك الله فيكم وفي رزقكم
+وجزا الله الحاج ايمن خير الجزاء
+على ما قدمه لنا من خدمات
+ومساعدات فكان لنا نعم الأخ ولم
+يقصر لحظه ف مساعدتنا
+ودى شهادة حق لكم وتستحقوها ❤️</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><i class="fas fa-user"></i></div>
+          <div>
+            <span class="testi-name" id="t3name">محمد حسين</span>
+            <span class="testi-loc" id="t3loc">الأسكندرية</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">تواصل معنا</div>
+      <h2 class="section-title" id="ctTitle">نحن هنا <span>لمساعدتك</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-inner reveal">
+      <p class="contact-desc" id="ctDesc">
+        تواصل معنا الآن واحجز رحلتك المباركة. فريقنا جاهز للرد على جميع استفساراتك وتسهيل إجراءات سفرك بإذن الله.
+      </p>
+      <a href="https://wa.me/201004280071" target="_blank" class="wa-btn">
+        <i class="fab fa-whatsapp"></i>
+        <span id="waBtnText">تواصل عبر واتساب</span>
+      </a>
+      <div class="contact-phones">
+        <a href="tel:+201004280071" class="phone-item">
+          <i class="fas fa-phone"></i>
+          <span dir="ltr">201004280071+</span>
+        </a>
+        <a href="tel:+201227281960" class="phone-item">
+          <i class="fas fa-phone"></i>
+          <span dir="ltr">201227281960+</span>
+        </a>
+      </div>
+      <div class="social-links">
+        <a href="https://wa.me/201004280071" target="_blank" class="social-link" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/share/1BJRhcsZhb/" target="_blank" class="social-link" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/salahkhalaf5?igsh=MWpzeWExYW94cGlxdg==" target="_blank" class="social-link" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@salahkhalaf16?_r=1&_t=ZS-96XvwaajbPR" target="_blank" class="social-link" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+
+      <div class="contact-address">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>الإسكندرية &nbsp;—&nbsp; الطابية &nbsp;—&nbsp; كوبري المبرة &nbsp;—&nbsp; مكتب صلاح خلف</span>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">☪ مؤسسة صلاح خلف</div>
+    <div class="footer-links">
+      <a href="#home" id="fl1">الرئيسية</a>
+      <a href="#about" id="fl2">من نحن</a>
+      <a href="#packages" id="fl3">الباقات</a>
+      <a href="#gallery" id="fl4">معرض الصور</a>
+      <a href="#contact" id="fl5">تواصل معنا</a>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-copy">
+      <span>جميع الحقوق محفوظة © 2026</span>
+      <span>—</span>
+      <span>مؤسسة <span>صلاح خلف</span> للرحلات وحجز التذاكر والتوريدات العمومية</span>
+    </div>
+    <div class="footer-bottom-strip"></div>
+  </div>
+</footer>
+ 
+<!-- SCROLL TO TOP -->
+<button id="scrollTop" onclick="scrollToTop()" title="العودة للأعلى">
+  <i class="fas fa-chevron-up"></i>
+</button>
+ 
+<!-- SCRIPT -->
+<script src="script.js"></script>
+</body>
+</html>
